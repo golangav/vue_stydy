@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+// 显示列表
+<script src="../js/vue.js"></script>
+<div id="app_example">
+    <ul>
+        <li v-for="item in movies">{{item}}</li>
+    </ul>
+</div>
+
+<script>
+    const app = new Vue({
+        el: "#app_example",
+        data: {
+            movies: ["大话西游", "少年派", "盗梦空间"]
+        }
+    })
+</script>
+</body>
+</html>

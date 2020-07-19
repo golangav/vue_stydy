@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<script src="../js/vue.js"></script>
+
+<div id="id">
+  <h2 :class="[active, line]"></h2>
+</div>
+
+<script>
+  const app = new Vue({
+    el: "#app",
+    data: {
+      active: "xxxxxxx",
+      line: "yyyyyyyy"
+    }
+  })
+</script>
+
+
+</body>
+</html>

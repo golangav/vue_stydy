@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+    .active{
+      color: red;
+    }
+  </style>
+</head>
+<body>
+<script src="../js/vue.js"></script>
+// 点击按钮循环变颜色
+<div id="app">
+  <h2 :class="{active: isActive,line: isLine}">{{message}}</h2>
+  <button v-on:click="btnClick">按钮</button>
+</div>
+<script>
+  const app = new Vue({
+    el: "#app",
+    data: {
+      message: "Hello Word!",
+      isActive: true,
+      isLine: false,
+    },
+    methods: {
+      btnClick: function () {
+        this.isActive = !this.isActive
+      }
+    }
+  })
+</script>
+
+</body>
+</html>

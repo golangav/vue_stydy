@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<script src="../js/vue.js"></script>
+
+<div id="app">
+  <img v-bind:src="imgUrl" alt="">
+</div>
+<script>
+  const app = new Vue({
+    el: "#app",
+    data:{
+      imgUrl: "https://img10.360buyimg.com/pop/s1180x940_jfs/t1/127934/19/6544/95604/5f0532ccEc5cbb2bd/7d04a817b78b8927.jpg.webp"
+    }
+  })
+</script>
+
+</body>
+</html>
