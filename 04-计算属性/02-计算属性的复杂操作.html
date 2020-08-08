@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<!--计算所有mv的价格-->
+
+<div id="app">
+  <h2>{{totalPrice}}</h2>
+</div>
+
+<script src="../js/vue.js"></script>
+
+<script>
+  const app = new Vue({
+    el: "#app",
+    data: {
+      "mv": [
+          {"id":1, "movie": "大话西游", "price": 18},
+          {"id":2, "movie": "功夫", "price": 100},
+          {"id":3, "movie": "海王", "price": 60},
+      ]
+    },
+    computed:{
+      totalPrice : function () {
+        let result = 0
+        for (let i=0; i < this.mv.length; i++){
+          result += this.mv[i].price
+        }
+        return result
+      }
+    }
+  })
+</script>
+
+
+</body>
+</html>

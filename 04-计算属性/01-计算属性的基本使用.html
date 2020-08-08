@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<!--字符串拼接-->
+
+<div id="app">
+  <h2>{{fullName}}</h2>
+</div>
+
+<script src="../js/vue.js"></script>
+
+<script>
+  const app = new Vue({
+    el: "#app",
+    data:{
+      firstName: "wei",
+      lastName: "fang shao",
+    },
+    computed: {
+      fullName: function () {
+        return this.firstName + " " + this.lastName
+      }
+    }
+  })
+</script>
+
+</body>
+</html>
