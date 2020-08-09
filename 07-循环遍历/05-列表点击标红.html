@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+    .active{
+      color: red;
+    }
+  </style>
+</head>
+<body>
+<div id="app">
+  <ul>
+    <li v-for="(item, index) in mv"
+        :class="{active: currentIndex === index}"
+        @click="liClick(index)">{{item}}
+    </li>
+  </ul>
+</div>
+
+<script src="../js/vue.js"></script>
+<script>
+  const app = new Vue({
+    el: "#app",
+    data: {
+      mv: ["海王", "功夫", "大话西游"],
+      currentIndex: 0
+    },
+    methods: {
+      liClick(i){
+        this.currentIndex = i
+      }
+    }
+  })
+</script>
+
+</body>
+</html>
