@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+  <!--https://www.bilibili.com/video/BV15741177Eh?p=50-->
+<div id="app">
+  <!-- 1. lazy-->
+  <!--  <input type="text" v-model.lazy="message">-->
+  <!--  <h2>{{message}}</h2>-->
+
+  <!-- 2. number-->
+  <!--  <input type="number" v-model.number="age">-->
+  <!--  <h2>{{age}}&#45;&#45;{{typeof age}}</h2>-->
+
+  <!-- 3. trim-->
+  <input type="text" v-model.trim="name">
+  <h2>{{name}}</h2>
+</div>
+
+<script src="../js/vue.js"></script>
+<script>
+  const app = new Vue({
+    el: "#app",
+    data: {
+      message: "Hello Word",
+      age: '',
+      name: ''
+    }
+
+  })
+</script>
+</body>
+</html>

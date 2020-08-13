@@ -45,11 +45,30 @@ const app = new Vue({
   },
   computed: {
     totalPrice(){
-      let totalPrice = 0;
-      for (let i=0; i < this.books.length; i++) {
-        totalPrice += this.books[i].count * this.books[i].price
-      }
-      return totalPrice
+      // 方式一
+      // let totalPrice = 0;
+      // for (let i=0; i < this.books.length; i++) {
+      //   totalPrice += this.books[i].count * this.books[i].price
+      // }
+      // return totalPrice
+
+      // 方式二
+      // let totalPrice = 0
+      // for (let i in this.books){
+      //   totalPrice += this.books[i].price * this.books[i].count
+      // }
+      // return totalPrice
+
+      // 方式三
+      // let totalPrice = 0
+      // for (let item of this.books){
+      //   totalPrice += item.price * item.count
+      // }
+      // return totalPrice
+
+
+
+
     }
   },
   filters:{

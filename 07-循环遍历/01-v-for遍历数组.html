@@ -6,9 +6,13 @@
 </head>
 <body>
 <div id="app">
-  <ul>
-    <li v-for="(item, index) in mv">{{index}} {{item}}</li>
-  </ul>
+
+  <div v-for="(item,index) in mv" :key="index">
+    {{index}} {{item}}
+  </div>
+<!--  <ul>-->
+<!--    <li v-for="(item, index) in mv" :key="index">{{index}} {{item}}</li>-->
+<!--  </ul>-->
 </div>
 
 <script src="../js/vue.js"></script>
@@ -16,7 +20,17 @@
   const app = new Vue({
     el: "#app",
     data: {
-      mv: ["海王", "功夫", "大话西游"]
+      mv: [
+        {
+          "capebs": "容量型"
+        },
+        {
+          "ssdebs": "性能优化型"
+        },
+        {
+          "ssd": "高性能型"
+        }
+      ]
     },
 
 
