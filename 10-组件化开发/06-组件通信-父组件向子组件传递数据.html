@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+
+<!--https://www.bilibili.com/video/BV15741177Eh?p=58-->
+
+<div id="app">
+  <cpn v-bind:cmovies="movies" v-bind:cmessage="message"></cpn>
+</div>
+
+<template id="cpn">
+  <div>
+    <p>{{cmovies}} {{cmessage}}</p>
+  </div>
+</template>
+
+<script src="../js/vue.js"></script>
+<script>
+
+  const cpn = {
+    template: '#cpn',
+
+    // 方式一: 数组
+    // props: ['cmovies', 'cmessage']
+
+    // 方式二: 类型限制 默认值 必传
+    props: {
+      cmovies: {
+        type: Array,
+        default(){
+          return []
+        }
+      },
+      cmessage: {
+        type: String,
+        default: "hello",
+        required:true
+      }
+    }
+  }
+
+  const app = new Vue({
+    el: "#app",
+    data: {
+      message: "Hello Word",
+      movies: ["功夫", "大话西游", "少林足球"]
+    },
+    components: {
+      cpn
+    }
+
+  })
+</script>
+</body>
+</html>
