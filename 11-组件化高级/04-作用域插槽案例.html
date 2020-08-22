@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<!--https://www.bilibili.com/video/av89760569?p=71-->
+<div id="app">
+  <cpn></cpn>
+  <cpn>
+    <template slot-scope="slot">
+      <span v-for="item in slot.data">{{item}}--</span>
+    </template>
+  </cpn>
+</div>
+
+<template id="cpn">
+  <div>
+    <slot :data="mv">
+      <ul>
+        <li v-for="item in mv">{{ item }}</li>
+      </ul>
+    </slot>
+  </div>
+</template>
+
+<script src="../js/vue.js"></script>
+<script>
+  const app = new Vue({
+    el: "#app",
+    data: {
+      message: "Hello Word"
+    },
+    components:{
+      cpn:{
+        template: "#cpn",
+        data(){
+          return {
+            mv: ["功夫", "少林足球", "海王"]
+          }
+        }
+      }
+    }
+
+  })
+</script>
+
+</body>
+</html>
