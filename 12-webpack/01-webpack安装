@@ -26,3 +26,6 @@ npm -g install npm@5.10.0
 
   # 依赖less
   npm install --save-dev less-loader@4.1.0 less@3.9.0
+
+  # 依赖图片
+  npm install --save-dev url-loader@1.1.2

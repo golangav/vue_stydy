@@ -4,7 +4,8 @@ module.exports = {
   entry: './src/main.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'bundle.js'
+    filename: 'bundle.js',
+    publicPath: 'dist/'
   },
   module: {
     rules: [
@@ -22,6 +23,18 @@ module.exports = {
           loader: "less-loader" // compiles Less to CSS
         }]
       },
+      {
+        test: /\.(png|jpg|gif|jpeg)$/,
+        use: [
+          {
+            loader: 'url-loader',
+            options: {
+              limit: 8196,
+              name: 'img/[name].[hash].[ext]'
+            },
+          }
+        ]
+      }
     ]
   }
 }
