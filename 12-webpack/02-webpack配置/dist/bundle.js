@@ -562,35 +562,35 @@ function updateLink (link, options, obj) {
 
 /***/ }),
 /* 2 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__js_mathUtils__ = __webpack_require__(3);
 
 
-console.log(__WEBPACK_IMPORTED_MODULE_0__js_mathUtils__["b" /* name */]);
-console.log(__WEBPACK_IMPORTED_MODULE_0__js_mathUtils__["a" /* age */]);
+var _mathUtils = __webpack_require__(3);
+
+console.log(_mathUtils.name);
+console.log(_mathUtils.age);
 
 // 3. 依赖css文件
-__webpack_require__(4)
+__webpack_require__(4);
 
 // 4. 依赖less文件
-__webpack_require__(9)
-document.writeln('<h2>Hello World </h2>')
+__webpack_require__(9);
+document.writeln('<h2>Hello World </h2>');
 
 /***/ }),
 /* 3 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-const name = "少年"
-/* harmony export (immutable) */ __webpack_exports__["b"] = name;
-
-const age = 18
-/* harmony export (immutable) */ __webpack_exports__["a"] = age;
 
 
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+var name = exports.name = "少年";
+var age = exports.age = 18;
 
 /***/ }),
 /* 4 */
