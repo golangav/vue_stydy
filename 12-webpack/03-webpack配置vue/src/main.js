@@ -11,16 +11,13 @@ require('./css/special.less')
 document.writeln('<h2>Hello World </h2>')
 
 import Vue from 'vue'
+// import App from './vue/app'
+import App from './vue/App'
 
 const app = new Vue({
   el: "#app",
-  template: `
-    <div>
-      <h2>{{message}}</h2>
-      <button>按钮</button>
-    </div>
-  `,
-  data: {
-    message: "Hello 少伟"
+  template: '<App/>',
+  components:{
+    App
   }
 })
