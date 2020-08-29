@@ -804,6 +804,7 @@ document.writeln('<h2>Hello World </h2>');
 
 var app = new _vue2.default({
   el: "#app",
+  template: '\n    <div>\n      <h2>{{message}}</h2>\n      <button>\u6309\u94AE</button>\n    </div>\n  ',
   data: {
     message: "Hello 少伟"
   }
